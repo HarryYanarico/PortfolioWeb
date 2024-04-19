@@ -1,53 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="tailwind.config.js"></script>
-<!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
 
 <head>
     <meta charset="UTF-8">
     <title>Harry Dev Portfolio</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="tailwind.config.js"></script> -->
 </head>
-<header>
-    <nav class="flex flex-col items-center justify-center w-full h-18 bg-gray-800 text-white font-bold rounded-t-none rounded-2xl">
-        <ul class="flex flex-nowrap gap-8 text-sm">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#Proyectos">Proyectos</a></li>
-            <li><a href="#SobreMi">Sobre Mí</a></li>
-            <li><a href="#Contacto">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
 
-<body class="bg-black flex flex-col">
-    <section id="#" class="mt-10 items-center justify-center bg-orange-600">
+<body id="#" class="flex flex-col relative bg-gray-400 items-center justify-center w-full">
+    <header class="flex w-full sticky top-0 z-50 justify-center bg-gray-800 rounded-t-none rounded-2xl">
+        <nav class="items-center h-16 justify-center text-white font-bold ">
+            <ul class="flex items-center h-full gap-8 text-xl">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#Proyectos">Proyectos</a></li>
+                <li><a href="#SobreMi">Sobre Mí</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="flex mt-10 items-center justify-center bg-violet-700 h-[400px] w-[80vw] max-w-[1000px]">
+        <div class="items-start rounded-full border-4 h-56 w-44 justify-start">
+            <h1 class="justify-center text-center">circle</h1>
+        </div>
         <div class="flex flex-row mt-10 h-10 relative items-center justify-center overflow-hidden">
-            <h1 class="m-2 text-white text-2xl ">
+            <h1 class="m-2 text-white text-2xl f ">
                 Harry Dev
             </h1>
             <div
-                class="Content-Slide flex flex-col items-center bg-transparent whitespace-nowrap relative hover:animate-none after:absolute before:absolute after:z-20 before:z-20">
-                <div class="Slide flex flex-col text-purple-800 animate-slide hover:delay-300">
+                class="Content-Slide flex flex-col items-center bg-transparent whitespace-nowrap relative hover:animate-none after:absolute before:absolute after:z-20 before:z-20 overflow-hidden">
+                <div class="Slide flex flex-col text-white animate-slide hover:delay-300">
                     <h2 class="my-2">Web</h2>
                     <h2 class="my-2">App Movil</h2>
                     <h2 class="my-2">Game</h2>
                     <h2 class="my-2">Software</h2>
                     <h2 class="my-2">IA</h2>
-                    <!-- <h2>Web</h2>
-                    <h2>App Movil</h2>
-                    <h2>Game</h2>
-                    <h2>Software</h2>
-                    <h2>IA</h2> -->
                 </div>
             </div>
-            <script>
-                var copy = document.querySelector(".Slide").cloneNode(true)
-                document.querySelector(".Content-Slide").appendChild(copy);
-            </script>
         </div>
     </section>
-    <section id="Proyectos" class="flex items-center justify-center">
+    <section id="Proyectos" class="flex items-center bg-indigo-700 justify-center">
         <div class="w-96 h-80 rounded-2xl">
+
 
         </div>
     </section>
@@ -61,4 +56,31 @@
     </section>
 </body>
 
+<script>
+    tailwind.config = {
+  content: [],
+  theme: {
+    extend: {
+      keyframes: {
+        'slide': {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-100%)' },
+        },
+        'trans-right': {
+          '0%, 100%': { transform: 'translateX(10px)' },
+          '50%': { transform: 'translateX(0)' }
+        }
+      },
+      animation: {
+        'slide': 'slide 20s infinite linear',
+        'trans-right': 'trans-right 1.5s ease-in-out infinite'
+      },
+      colors: {
+        clifford: '#da373d',
+      }
+    },
+  },
+  plugins: [],
+}  
+</script>
 </html>
