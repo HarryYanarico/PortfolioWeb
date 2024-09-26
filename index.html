@@ -57,22 +57,23 @@
   </section>
 
   <section class="flex items-center justify-center w-[95vw] rounded-2xl my-4 h-[600px]">
-    <article class="card relative flex flex-col bg-white rounded-2xl w-80 h-[380px]">
-      <figure class="flex rounded-2xl relative h-1/2 w-full overflow-hidden">
-        <div class="relative h-[160px] w-full overflow-hidden rounded-t-lg rounded-l-lg">
-          <img src="images/Prueba2.png" alt="imagen de proyecto" class="card-img absolute w-full h-[180px]" />
-        </div>
+    <article class="card relative flex flex-col bg-transparent rounded-lg w-80 h-[380px]">
+      <figure class="flex rounded-lg relative h-1/2 w-full overflow-hidden
+        before:content-[''] before:w-[40px] before:h-[25px] before:absolute before:rounded-bl-lg before:bg-transparent before:top-[89%] before:left-[48.8%] 
+        before:border-b-4 before:border-l-4 before:border-sky-500
+        after:content-[''] after:w-[40px] after:h-[25px] after:absolute after:rounded-bl-lg after:bg-transparent after:top-[75%] after:left-[-4px] 
+        after:border-b-4 after:border-l-4 after:border-sky-500">
+        <img src="images/Prueba2.png" alt="imagen de proyecto" class="card-img w-full h-full" />
       </figure>
-      <div class="absolute top-[160px] right-0 rounded-b-lg px-4 w-[155px] h-[24px] bg-no-repeat bg-right-bottom"
-        style="background-image: url(images/Prueba2.png); background-size: 206% 770%;">
-      </div>
-
-      <header class="absolute top-[166px] left-0 rounded-t-lg bg-green-400 px-4 w-[155px]">
-        <h3 class="card-title">Proyecto</h3>
-      </header>
-
-      <footer class="bg-gray-400 rounded-b-lg px-4 w-full h-1/2">
-        <p class="card-description">Descripción breve de la tarjeta.</p>
+      <footer class="relative bg-green-400 rounded-b-lg px-4 w-full h-1/2 border-sky-500 border-t-4 rounded-tr-lg">
+        <header class="absolute items-center top-[-31px] left-0 rounded-t-lg bg-green-400 px-4 w-1/2 h-1/6 border-t-4 border-r-4 border-sky-500 
+            before:content-[''] before:w-[40px] before:h-[40px] before:absolute before:rounded-tl-lg before:bg-transparent before:top-[-4px] before:left-[-4px] 
+            before:border-t-4 before:border-l-4 before:border-sky-500
+            after:content-[''] after:w-[40px] after:h-[25px] after:absolute after:rounded-bl-lg after:bg-transparent after:top-[23%] after:left-[97.5%] 
+            after:border-b-4 after:border-l-4 after:border-green-400">
+          <h3 class="card-title flex ">Video Llamada</h3>
+        </header>
+        <p class="card-description">una Pagina web para realizar llamadas web de bajo consumo de memoria ram.</p>
         <a href="#" class="card-button">Leer más</a>
       </footer>
     </article>
