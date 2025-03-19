@@ -1,0 +1,22 @@
+name: Desplegar en InfinityFree
+
+on:
+   push:
+     branches:
+      -master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v4
+
+    - name: Configurar conexión FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        ftp-server: ${{ secrets.FTP_SERVER }}  # Reemplaza con la URL de tu servidor FTP
+        ftp-username: ${{ secrets.FTP_USERNAME }}
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./  # Directorio local a desplegar
+        server-dir: /htdocs/  # Directorio en el servidor donde se desplegarán los archivos
