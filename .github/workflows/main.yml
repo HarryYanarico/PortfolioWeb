@@ -15,8 +15,8 @@ jobs:
     - name: Configurar conexión FTP
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        ftp-server: ${{ secrets.FTP_SERVER }}  # Reemplaza con la URL de tu servidor FTP
+        ftp-server: ftpupload.net
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./  # Directorio local a desplegar
-        server-dir: /htdocs/  # Directorio en el servidor donde se desplegarán los archivos
+        local-dir: ./  
+        server-dir: /htdocs/
