@@ -3,7 +3,7 @@ name: Despliegue automático a InfinityFree
 on:
   push:
     branches:
-      - main  # Cambia 'main' si usas otra rama
+      - master  # Cambia 'main' si usas otra rama
 
 jobs:
   deploy:
