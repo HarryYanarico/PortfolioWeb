@@ -3,7 +3,7 @@ name: Desplegar en InfinityFree
 on:
    push:
      branches:
-      -master
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
