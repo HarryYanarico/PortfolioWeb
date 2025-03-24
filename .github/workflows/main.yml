@@ -1,22 +1,23 @@
-name: Desplegar en InfinityFree
+name: Despliegue automático a InfinityFree
 
 on:
-   push:
-     branches:
-      -master
+  push:
+    branches:
+      - master  # Cambia 'main' si usas otra rama
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout del código
+    - name: Descargar el código
       uses: actions/checkout@v4
 
-    - name: Configurar conexión FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+    - name: Subir archivos a InfinityFree mediante FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        ftp-server: ftpupload.net
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./  
-        server-dir: /htdocs/
+        server: ftpupload.net  # Servidor FTP de InfinityFree
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./  # Carpeta del código en GitHub
+        server-dir: /htdocs/  # Carpeta en el servidor de InfinityFree
