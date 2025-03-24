@@ -12,13 +12,14 @@
 </head>
 
 <body id="#"
-  class="flex flex-col content-center justify-center items-center bg-gradient-to-b from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-center bg-no-repeat bg-cover">
+  class="flex flex-col content-center justify-center items-center bg-gradient-to-b from-indigo-700 from-10% via-sky-600 via-30% to-emerald-800 to-90% bg-center bg-no-repeat bg-cover">
   <header class="flex sticky top-0 z-50 justify-center bg-slate-800 rounded-t-none rounded-2xl w-full">
     <nav class="items-center h-16 justify-center text-white font-bold">
       <ul class="flex items-center h-full gap-10 text-xl">
         <li><a href="#">Inicio</a></li>
-        <li><a href="#Tecnologias">tecnologias</a></li>
-        <li><a href="#Contacto">Contactos</a></li>
+        <li><a href="#Proyectos">Proyectos</a></li>
+        <li><a href="#Tecnologias">Tecnologias</a></li>
+        <li><a href="#Contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -56,27 +57,13 @@
     </div>
   </section>
 
-  <section class="flex items-center justify-center w-[95vw] rounded-2xl my-4 h-[600px]">
-    <article class="card relative flex flex-col bg-transparent rounded-lg w-80 h-[380px]">
-      <figure class="flex rounded-lg relative h-1/2 w-full overflow-hidden
-        before:content-[''] before:w-[40px] before:h-[25px] before:absolute before:rounded-bl-lg before:bg-transparent before:top-[89%] before:left-[48.8%] 
-        before:border-b-4 before:border-l-4 before:border-sky-500
-        after:content-[''] after:w-[40px] after:h-[25px] after:absolute after:rounded-bl-lg after:bg-transparent after:top-[75%] after:left-[-4px] 
-        after:border-b-4 after:border-l-4 after:border-sky-500">
-        <img src="images/Prueba2.png" alt="imagen de proyecto" class="card-img w-full h-full" />
-      </figure>
-      <footer class="relative bg-green-400 rounded-b-lg px-4 w-full h-1/2 border-sky-500 border-t-4 rounded-tr-lg">
-        <header class="absolute items-center top-[-31px] left-0 rounded-t-lg bg-green-400 px-4 w-1/2 h-1/6 border-t-4 border-r-4 border-sky-500 
-            before:content-[''] before:w-[40px] before:h-[40px] before:absolute before:rounded-tl-lg before:bg-transparent before:top-[-4px] before:left-[-4px] 
-            before:border-t-4 before:border-l-4 before:border-sky-500
-            after:content-[''] after:w-[40px] after:h-[25px] after:absolute after:rounded-bl-lg after:bg-transparent after:top-[23%] after:left-[97.5%] 
-            after:border-b-4 after:border-l-4 after:border-green-400">
-          <h3 class="card-title flex ">Video Llamadas</h3>
-        </header>
-        <p class="card-description">una Pagina web para realizar llamadas web de bajo consumo de memoria ram.</p>
-        <a href="#" class="card-button">Leer más.</a>
-      </footer>
-    </article>
+  <section id="Proyectos"
+    class="flex flex-col items-center justify-normal bg-slate-400/40 w-[95vw] rounded-2xl my-4 h-[600px]">
+    <div class="flex items-center justify-center w-96 h-10 text-3xl text-white m-8 font-sans font-bold">
+      <h3>Proyectos:</h3>
+    </div>
+    <div id="cards" class="flex flex-row justify-center gap-6 ">
+    </div>
   </section>
 
   <section id="Tecnologias" class="flex items-center bg-indigo-700 justify-center w-[95vw] rounded-2xl my-4 font-sans">
@@ -181,12 +168,12 @@
           DevWeb:
             "url('images/appweb.png')",
           software:
-            "url('images/software.jpeg')",
+            "url('images/software.jpg')",
           game: "url('images/game.jpg')",
           fondo:
             "url('https://png.pngtree.com/background/20210711/original/pngtree-blue-technology-future-artificial-intelligence-science-picture-image_1125424.jpg')",
           perfil:
-            "images\img1.png",
+            "url(images/perfil/perfil02.avif)",
         },
         keyframes: {
           slide: {
