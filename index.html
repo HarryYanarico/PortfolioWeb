@@ -3,26 +3,31 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harry Dev Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="javascrips.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <script src="tailwind.config.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 
 <body id="#"
-  class="flex flex-col content-center justify-center items-center bg-gradient-to-b from-indigo-700 from-10% via-sky-600 via-30% to-emerald-800 to-90% bg-center bg-no-repeat bg-cover">
-  <header class="flex sticky top-0 z-50 justify-center bg-slate-800 rounded-t-none rounded-2xl w-full">
-    <nav class="items-center h-16 justify-center text-white font-bold">
-      <ul class="flex items-center h-full gap-10 text-xl">
-        <li><a href="#">Inicio</a></li>
+  class="flex flex-col content-center justify-center items-center bg-gradient-to-b from-indigo-700 from-10% via-sky-600 via-30% to-emerald-800 to-100% "
+  style="@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');">
+
+  <header
+    class="flex z-50  sticky top-0 items-center justify-center bg-slate-800 rounded-t-none rounded-2xl w-full md:h-14">
+    <nav class="items-center justify-center text-white font-bold">
+      <ul class="flex flex-col md:flex-row items-center gap-1 md:gap-10 text-xl">
+        <li class=" hover:bg-black p-2 hover:border-t-black hover:border-t-2 rounded-t-xl"><a href="#">Inicio</a></li>
         <li><a href="#Proyectos">Proyectos</a></li>
         <li><a href="#Tecnologias">Tecnologias</a></li>
         <li><a href="#Contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
+
   <section
     class="flex justify-center rounded-3xl gap-4 sm:gap-24 items-center mb-10 px-4 backdrop-opacity-65 h-[370px] sm:h-[600px] w-full max-w-[1000px]">
     <div
@@ -58,101 +63,90 @@
   </section>
 
   <section id="Proyectos"
-    class="flex flex-col items-center justify-normal bg-slate-400/40 w-[95vw] rounded-2xl my-4 h-[600px]">
+    class="flex flex-col items-center justify-normal bg-slate-400/40 w-[95vw] rounded-2xl my-4 p-10">
     <div class="flex items-center justify-center w-96 h-10 text-3xl text-white m-8 font-sans font-bold">
       <h3>Proyectos:</h3>
     </div>
-    <div id="cards" class="flex flex-row justify-center gap-6 ">
+    <div id="cards" class="flex flex-col justify-center gap-6 sm:flex-col md:flex-col lg:flex-row">
     </div>
   </section>
 
-  <section id="Tecnologias" class="flex items-center bg-indigo-700 justify-center w-[95vw] rounded-2xl my-4 font-sans">
-    <div class="flex m-2">
-      <div class="flex flex-col container mx-auto max-w-[1400px] items-center h-auto">
-        <h2 class="text-3xl text-white mb-4">Conocimientos en:</h2>
-        <div class="mx-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 h-[450px]">
+  <section id="Tecnologias"
+    class="flex items-center bg-indigo-700/45 justify-center rounded-2xl my-4 font-sans p-2 md:p-5 md:mt-8">
 
-          <article class="flex items-end justify-items-end bg-cover bg-center rounded-lg bg-DevWeb shadow-md h-full ">
-            <div
-              class="flex flex-col items-start justify-end bg-gradient-to-t from-violet-700 from-20% p-2 h-full w-full text-white  hover:from-zinc-800 hover:from-20% rounded-lg">
-              <h3 class="text-xl mb-2">Web</h3>
-              <p class="h-[145px]">
-                manejo las tecnologías de HTML, CSS, JavaScript, Laravel, Python, Django, ReactJS, Tailwind,
-                Bootstrap y para complementar conozco Microsoft SQL, MariaDB con phpMyAdmin, Apache, MySQL.
-              </p>
-            </div>
-          </article>
+    <div class="flex flex-col container mx-auto max-w-[1400px] items-center">
+      <h2 class="text-3xl text-white mb-4">Conocimientos en:</h2>
+      <div class="mx-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
 
-          <article class="flex items-end justify-items-end bg-cover bg-center rounded-lg bg-software shadow-md h-full">
-            <div
-              class="flex flex-col items-start justify-end bg-gradient-to-t from-violet-700 from-20% p-2 w-full h-full text-white  hover:from-zinc-800 hover:from-20% rounded-lg">
-              <h3 class="text-xl mb-2">Software</h3>
-              <p class="h-[145px]">
-                Para el desarrollo de software utilizo C++ Builder, Python,
-                NetBeans, Visual Studio.
-              </p>
-            </div>
-          </article>
+        <article class="flex items-end justify-items-end bg-cover bg-center rounded-lg bg-DevWeb shadow-md h-[500px] ">
+          <div
+            class="flex flex-col items-start justify-end bg-gradient-to-t from-violet-700 from-20% p-2 h-full w-full text-white  hover:from-zinc-800 hover:from-20% rounded-lg">
+            <h3 class="text-xl mb-2">Web</h3>
+            <p class="h-[145px]">
+              manejo las tecnologías de HTML, CSS, JavaScript, Laravel, Python, Django, ReactJS, Tailwind,
+              Bootstrap y para complementar conozco Microsoft SQL, MariaDB con phpMyAdmin, Apache, MySQL.
+            </p>
+          </div>
+        </article>
 
-          <article class="flex items-center justify-center bg-cover bg-center rounded-lg bg-andapp shadow-md">
-            <div
-              class="flex flex-col items-start justify-end bg-gradient-to-t from-violet-700 from-20% p-2 w-full h-full text-white  hover:from-zinc-800 hover:from-20% rounded-lg">
-              <h3 class="text-xl mb-2">Aplicaciones Móviles</h3>
-              <p class="h-[145px]">
-                En el desarrollo de apps utilizo Android Studio (Java,
-                Kotlin), Flutter.
-              </p>
-            </div>
-          </article>
+        <article class="flex items-end justify-items-end bg-cover bg-center rounded-lg bg-software shadow-md h-[500px]">
+          <div
+            class="flex flex-col items-start justify-end bg-gradient-to-t from-violet-700 from-20% p-2 w-full h-full text-white  hover:from-zinc-800 hover:from-20% rounded-lg">
+            <h3 class="text-xl mb-2">Software</h3>
+            <p class="h-[145px]">
+              Para el desarrollo de software utilizo C++ Builder, Python,
+              NetBeans, Visual Studio.
+            </p>
+          </div>
+        </article>
 
-          <article class="flex items-center justify-center bg-cover bg-center rounded-lg bg-game shadow-md">
-            <div
-              class="flex flex-col items-start justify-end bg-gradient-to-t from-violet-700 from-20% p-2 w-full h-full text-white  hover:from-zinc-800 hover:from-20% rounded-lg">
-              <h3 class="text-xl mb-2">Game</h3>
-              <p class="h-[145px]">
-                Para los juegos y animaciones utilizo Blender,
-                Unreal Engine.
-              </p>
-            </div>
-          </article>
-        </div>
+        <article class="flex items-end justify-items-end bg-cover bg-center rounded-lg bg-appAnd shadow-md h-[500px]">
+          <div
+            class="flex flex-col items-start justify-end bg-gradient-to-t from-violet-700 from-20% p-2 w-full h-full text-white  hover:from-zinc-800 hover:from-20% rounded-lg">
+            <h3 class="text-xl mb-2">Aplicaciones Móviles</h3>
+            <p class="h-[145px]">
+              En el desarrollo de apps utilizo Android Studio (Java,
+              Kotlin), Flutter.
+            </p>
+          </div>
+        </article>
+
+        <article class="flex items-end justify-items-end bg-cover bg-center rounded-lg bg-game shadow-md h-[500px]">
+          <div
+            class="flex flex-col items-start justify-end bg-gradient-to-t from-violet-700 from-20% p-2 w-full h-full text-white  hover:from-zinc-800 hover:from-20% rounded-lg">
+            <h3 class="text-xl mb-2">Game</h3>
+            <p class="h-[145px]">
+              Para los juegos y animaciones utilizo Blender,
+              Unreal Engine.
+            </p>
+          </div>
+        </article>
       </div>
     </div>
-  </section>
-  <footer id="Contacto" class="flex flex-col inset-x-0 bottom-0 items-end w-full">
-    <div class="flex flex-row items-center justify-center bg-slate-800 text-white rounded-t-3xl gap-10 w-full h-32">
-      <!-- <div class="flex flex-row items-center justify-center bg-emerald-700 text-white rounded-t-3xl gap-10 w-full h-52 shadow-[inset_4px_4px_10px_rgba(0,0,0,0.3),_inset_-4px_-4px_10px_rgba(255,255,255,0.2)]"> -->
 
-      <div class="mb-4 md:mb-0">
-        <h3 class="text-lg font-bold mb-2">Informacion de Contacto:</h3>
-        <!-- <p>si necesecitas ayuda con algun proyecto... <a>Contáctame</a>.</p> -->
-      </div>
-      <div class="flex items-center">
-        <ul class="flex mr-4 gap-4">
-          <li class="mb-2">
-            <i class="fas fa-envelope mr-2"></i><a href="mailto:harryyanarico19@gmail.com.com">harryyanarico19@gmail.com
-            </a>
-          </li>
-          <li class="mb-2">
-            <i class="fas fa-phone mr-2"></i><a
-              href="https://api.whatsapp.com/send?phone=59175372012&text=Hola%2C%20necesito%20ayuda">+591 75372012
-            </a>
-          </li>
-        </ul>
-        <div>
-          <a href="mailto:tuemail@gmail.com"
-            class="bg-red-600 text-white rounded-full px-4 py-2 mr-2 hover:border-black hover:border-2"><i
-              class="fab fa-google"></i></a>
-          <a href="https://www.facebook.com/tupagina" target="_blank" rel="noopener noreferrer"
-            class="bg-blue-800 text-white rounded-full px-4 py-2 mr-2 hover:border-black hover:border-2"><i
-              class="fab fa-facebook-f"></i></a>
-          <a href="https://www.linkedin.com/tuperfil" target="_blank" rel="noopener noreferrer"
-            class="bg-blue-500 text-white rounded-full px-4 py-2 mr-2 hover:border-black hover:border-2"><i
-              class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer"
-            class="bg-gray-800 text-white rounded-full px-4 py-2 hover:border-black hover:border-2"><i
-              class="fab fa-github"></i></a>
-        </div>
+  </section>
+  <footer id="Contacto" class="flex items-end justify-center w-full">
+    <div class="flex flex-col items-center justify-center bg-slate-800 text-white rounded-t-3xl w-full">
+
+      <h3 class="text-lg text-center font-bold my-2">Informacion de Contacto:</h3>
+      <!-- <p>si necesecitas ayuda con algun proyecto... <a>Contáctame</a>.</p> -->
+
+      <div class="flex items-center justify-center flex-row h-20 w-full gap-4">
+        <a href="https://api.whatsapp.com/send?phone=59175372012&text=Hola%2C%20necesito%20ayuda" target="_blank">
+          <i class="bi bi-whatsapp flex items-center justify-center h-10 w-10 rounded-full text-2xl bg-green-700"></i>
+        </a>
+
+
+        <a href="mailto:harryyanarico19@gmail.com"
+          class="flex items-center justify-center h-10 w-10 rounded-full text-2xl bg-red-600"><i
+            class="bi bi-envelope-at-fill"></i></a>
+        <a href="https://www.linkedin.com/in/harry-yanarico-20802a12b" target="_blank"
+          class="bg-blue-500 text-white flex items-center justify-center h-10 w-10 rounded-full text-2xl"><i
+            class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/HarryYanarico" target="_blank"
+          class="bg-[#010409] text-white flex items-center justify-center h-10 w-10 rounded-full text-2xl"><i
+            class="bi bi-github"></i></a>
+
       </div>
     </div>
   </footer>
@@ -164,7 +158,7 @@
     theme: {
       extend: {
         backgroundImage: {
-          andapp: "url(images/AndroidDev.png)",
+          appAnd: "url(images/AndroidDev.png)",
           DevWeb:
             "url('images/appweb.png')",
           software:
