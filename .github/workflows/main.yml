@@ -16,7 +16,7 @@ jobs:
     - name: Subir archivos a InfinityFree mediante FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftpupload.net  # Servidor FTP de InfinityFree
+        server: ${{ secrets.FTP_HOST }}  # Servidor FTP de InfinityFree
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./  # Carpeta del código en GitHub
